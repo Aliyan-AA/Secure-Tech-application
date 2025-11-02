@@ -48,7 +48,14 @@ class AuditLog(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     ip = db.Column(db.String(45))
 
-db.create_all()
+# Initialize database tables within application context
+def init_db():
+    """Initialize database tables."""
+    with app.app_context():
+        db.create_all()
+
+# Initialize database on import
+init_db()
 
 # Helper functions
 def is_strong_password(password):
