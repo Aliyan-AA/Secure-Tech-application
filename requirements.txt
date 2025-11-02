@@ -1,8 +1,6 @@
-Flask
-flask_sqlalchemy
-flask-bcrypt
-cryptography
-Werkzeug
-plotly
-streamlit
+Flask>=2.0.0
+Flask-SQLAlchemy>=3.0.0
+Flask-Bcrypt>=1.0.0
+cryptography>=40.0.0
+Werkzeug>=2.0.0
 
